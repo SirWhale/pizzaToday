@@ -78,3 +78,11 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+//Eigen filters
+
+Route::filter('birthday', function () {
+    if (date('d/m') == '21/05') {
+        return View::make('birthday');
+    }
+});

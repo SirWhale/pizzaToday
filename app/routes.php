@@ -15,3 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('login', function () {
+    return View::make('login');
+});
+
+Route::get('dashboard', function () {
+    return Redirect::to('login');
+});

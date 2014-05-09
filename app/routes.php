@@ -20,4 +20,9 @@ Route::get('login', function () {
     return View::make('login');
 });
 
+Route::get('employeemanager', function($value='')
+{
+	return View::make('employeemanager');
+});
+
 Route::get('dashboard', 'DashboardController@returnHello');
